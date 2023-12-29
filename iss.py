@@ -9,7 +9,7 @@ def get_iss_location():
     latitude = float(data['iss_position']['latitude'])
     longitude = float(data['iss_position']['longitude'])
     view_state = pdk.ViewState(latitude=latitude, longitude=longitude, zoom=3, bearing=-29.36, pitch=40.5)
-    layer = pdk.Layer('ScatterplotLayer', data=[latitude, longitude], get_position=[latitude,longitude], get_radius=100000,
+    layer = pdk.Layer('ScatterplotLayer', data=[latitude, longitude], get_position=[latitude,longitude], get_radius=500000,
                       get_fill_color=[0, 255, 0])
     map_ = pdk.Deck(layers=[layer], initial_view_state=view_state)
     map_.update()

@@ -21,6 +21,7 @@ def get_iss_location():
 
 st.title("INTERNATIONAL SPACE STATION TRACKER")
 st.write("This app displays the live location of International Space Station")
+st.write('* GREEN DOT ON MAP IS SPACE STATION ')
 
 
 if st.button('Display Location'):
